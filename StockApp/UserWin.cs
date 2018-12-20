@@ -21,5 +21,17 @@ namespace StockApp
         {
             Application.Exit();
         }
+
+        private void UserWin_Load(object sender, EventArgs e)
+        {
+            foreach (var c in DataBase.UserList)
+            {
+                if (c.userID == Login.IdSave)
+                {
+                    UserName.Text = c.Name;
+                    UserUser.Text = c.userID;
+                }
+            }
+        }
     }
 }

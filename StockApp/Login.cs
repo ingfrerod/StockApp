@@ -16,9 +16,9 @@ namespace StockApp
         {
             InitializeComponent();
         }
-
+        public static string IdSave = "";
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
             int count = 0;
             foreach (var c in DataBase.UserList)
             {
@@ -29,15 +29,20 @@ namespace StockApp
                     {
                         AdminWin adminWin = new AdminWin();
                         this.Hide();
+                        IdSave = c.userID;
                         adminWin.Show();
                         count++;
+                        
+                        
                     }
                     else
                     {
                         UserWin userWin = new UserWin();
                         this.Hide();
+                        IdSave = c.userID;
                         userWin.Show();
                         count++;
+                        
                     }
                 
                 

@@ -11,9 +11,9 @@ namespace StockApp
 
         public static List<User> UserList { get; set; } = new List<User>
         {
-            new User("FR","123",true),
-            new User("AS","223",false),
-            new User("AA","456",false)
+            new User("FR","Fredy Rodriguez","123",true),
+            new User("AS","Andrea Suarez","223",false),
+            new User("AA","Angie Antonova","456",false)
 
         };
        
