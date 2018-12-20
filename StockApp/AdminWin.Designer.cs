@@ -66,11 +66,13 @@
             // AdminUser
             // 
             this.AdminUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AdminUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminUser.Location = new System.Drawing.Point(152, 233);
             this.AdminUser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.AdminUser.Name = "AdminUser";
-            this.AdminUser.Size = new System.Drawing.Size(252, 48);
+            this.AdminUser.Size = new System.Drawing.Size(354, 48);
             this.AdminUser.TabIndex = 4;
+            this.AdminUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -125,20 +127,25 @@
             // AdminName
             // 
             this.AdminName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminName.Location = new System.Drawing.Point(152, 95);
             this.AdminName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.AdminName.Name = "AdminName";
-            this.AdminName.Size = new System.Drawing.Size(252, 48);
+            this.AdminName.Size = new System.Drawing.Size(354, 48);
             this.AdminName.TabIndex = 3;
+            this.AdminName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::StockApp.Properties.Resources.admin_png_7;
             this.pictureBox1.Location = new System.Drawing.Point(152, 394);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(298, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AdminWin
             // 
@@ -157,6 +164,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "AdminWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminWin_FormClosed);
             this.Load += new System.EventHandler(this.AdminWin_Load);

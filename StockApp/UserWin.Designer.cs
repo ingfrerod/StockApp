@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -37,17 +36,9 @@
             this.UserName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(162, 390);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 217);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
             // 
             // button5
             // 
@@ -92,11 +83,13 @@
             // UserUser
             // 
             this.UserUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.UserUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserUser.Location = new System.Drawing.Point(162, 214);
             this.UserUser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.UserUser.Name = "UserUser";
             this.UserUser.Size = new System.Drawing.Size(252, 48);
             this.UserUser.TabIndex = 16;
+            this.UserUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserName
             // 
@@ -107,6 +100,7 @@
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(252, 48);
             this.UserName.TabIndex = 15;
+            this.UserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -130,6 +124,18 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Name";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::StockApp.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(162, 390);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // UserWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -146,6 +152,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "UserWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userwindows";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserWin_FormClosed);
             this.Load += new System.EventHandler(this.UserWin_Load);
