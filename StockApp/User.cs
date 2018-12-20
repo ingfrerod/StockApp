@@ -10,11 +10,13 @@ namespace StockApp
     {
         public string userID { get; set; }
         public string Password { get; private set; }
-        
-        public User (string user, string password)
+        public bool Admin { get; set; }
+
+        public User (string user, string password,bool admin)
         {
             userID = user;
             Password = password;
+            Admin = admin;
         }
     }
 }

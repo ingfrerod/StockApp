@@ -1,6 +1,6 @@
 ﻿namespace StockApp
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -41,9 +41,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(64, 209);
+            this.btnLogin.Location = new System.Drawing.Point(128, 402);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(150, 44);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(246, 209);
+            this.btnExit.Location = new System.Drawing.Point(492, 402);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(150, 44);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -61,60 +63,69 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(145, 69);
+            this.txtID.Location = new System.Drawing.Point(290, 133);
+            this.txtID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(156, 20);
+            this.txtID.Size = new System.Drawing.Size(308, 31);
             this.txtID.TabIndex = 0;
             // 
             // txtPsw
             // 
-            this.txtPsw.Location = new System.Drawing.Point(145, 118);
+            this.txtPsw.Location = new System.Drawing.Point(290, 227);
+            this.txtPsw.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPsw.Name = "txtPsw";
             this.txtPsw.PasswordChar = '*';
-            this.txtPsw.Size = new System.Drawing.Size(156, 20);
+            this.txtPsw.Size = new System.Drawing.Size(308, 31);
             this.txtPsw.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 69);
+            this.label1.Location = new System.Drawing.Point(128, 133);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.Size = new System.Drawing.Size(38, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 125);
+            this.label2.Location = new System.Drawing.Point(128, 240);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(112, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password:";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(370, 44);
+            this.pictureBox1.Image = global::StockApp.Properties.Resources.login_system_icon_13;
+            this.pictureBox1.Location = new System.Drawing.Point(744, 58);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(408, 358);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 13);
+            this.label3.Location = new System.Drawing.Point(128, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(257, 24);
+            this.label3.Size = new System.Drawing.Size(491, 44);
             this.label3.TabIndex = 7;
             this.label3.Text = "Welcome to the Stock App";
             // 
-            // Form1
+            // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 260);
+            this.ClientSize = new System.Drawing.Size(1276, 500);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -123,8 +134,10 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Name = "Login";
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
