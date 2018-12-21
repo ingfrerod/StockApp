@@ -117,5 +117,12 @@ namespace StockApp
             product.MdiParent = this;
             product.Show();
         }
+
+        private void productsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SearchProduct search = new SearchProduct();
+            search.MdiParent = this;
+            search.Show();
+        }
     }
 }

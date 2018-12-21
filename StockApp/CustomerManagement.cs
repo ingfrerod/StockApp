@@ -23,11 +23,19 @@ namespace StockApp
             {
                 DataBase.CustomerList.Add(new Customer(int.Parse(TxtIDCli.Text), TxtNaCli.Text, TxtAdCli.Text));
                 MessageBox.Show(TxtNaCli.Text + " has been successfully saved ");
+                TxtIDCli.Text = "";
+                TxtNaCli.Text = "";
+                TxtAdCli.Text = "";
+                TxtIDCli.Focus();
                 return true;
             }
             catch (Exception error)
             {
                 MessageBox.Show("Error" + error);
+                TxtIDCli.Text = "";
+                TxtNaCli.Text = "";
+                TxtAdCli.Text = "";
+                TxtIDCli.Focus();
                 return false;
             }
         }
@@ -41,15 +49,27 @@ namespace StockApp
                 {
                     MessageBox.Show(TxtNaCli.Text + " Has been Successfully deleted");
                     DataBase.CustomerList.Remove(item);
+                    TxtIDCli.Text = "";
+                    TxtNaCli.Text = "";
+                    TxtAdCli.Text = "";
+                    TxtIDCli.Focus();
                 }
                 else
                 {
                     MessageBox.Show(TxtNaCli.Text + " Is not in Our Database");
+                    TxtIDCli.Text = "";
+                    TxtNaCli.Text = "";
+                    TxtAdCli.Text = "";
+                    TxtIDCli.Focus();
                 }
             }
             catch (Exception error)
             {
                 MessageBox.Show("Error" + error);
+                TxtIDCli.Text = "";
+                TxtNaCli.Text = "";
+                TxtAdCli.Text = "";
+                TxtIDCli.Focus();
             }
 
 

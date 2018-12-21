@@ -10,13 +10,18 @@ using System.Windows.Forms;
 
 namespace StockApp
 {
-    public partial class Search : WinBase
+    public partial class SearchProduct : Search
     {
-        public Search()
+        public SearchProduct()
         {
             InitializeComponent();
+            dataGridView1.DataSource = DataBase.ProductsList;
+            
         }
 
-        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

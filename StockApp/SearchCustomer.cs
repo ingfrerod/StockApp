@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace StockApp
 {
-    public partial class Search : WinBase
+    public partial class SearchCustomer : Search
     {
-        public Search()
+        public SearchCustomer()
         {
             InitializeComponent();
         }
-
-        
     }
 }
