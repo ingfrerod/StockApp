@@ -16,6 +16,13 @@ namespace StockApp
             new User("AA","Angie Antonova","456",false)
 
         };
+
+        public static List<Products> ProductsList { get; set; } = new List<Products>
+        {
+
+        };
+
+        
        
         
         

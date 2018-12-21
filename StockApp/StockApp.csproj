@@ -76,6 +76,7 @@
     <Compile Include="ProductManagement.Designer.cs">
       <DependentUpon>ProductManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Products.cs" />
     <Compile Include="Search.cs">
       <SubType>Form</SubType>
     </Compile>

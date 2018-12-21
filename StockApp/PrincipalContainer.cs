@@ -110,5 +110,12 @@ namespace StockApp
             customer.MdiParent = this;
             customer.Show();
         }
+
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductManagement product = new ProductManagement();
+            product.MdiParent = this;
+            product.Show();
+        }
     }
 }
