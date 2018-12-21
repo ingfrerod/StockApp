@@ -17,6 +17,58 @@ namespace StockApp
             InitializeComponent();
         }
 
+        public override Boolean Save()
+        {
+            try
+            {
+                DataBase.CustomerList.Add(new Customer(int.Parse(TxtIDCli.Text), TxtNaCli.Text, TxtAdCli.Text));
+                MessageBox.Show(TxtNaCli.Text + " has been successfully saved ");
+                return true;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+                return false;
+            }
+        }
+
+        public override void Delete()
+        {
+            try
+            {
+                var item = DataBase.CustomerList.SingleOrDefault(x => x.ID == int.Parse(TxtIDCli.Text));
+                if (item != null)
+                {
+                    MessageBox.Show(TxtNaCli.Text + " Has been Successfully deleted");
+                    DataBase.CustomerList.Remove(item);
+                }
+                else
+                {
+                    MessageBox.Show(TxtNaCli.Text + " Is not in Our Database");
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+            }
+
+
+            //DataBase.ProductsList.RemoveAll(x => x.ID == int.Parse(TxtIdPro.Text));
+            /*foreach (var c in DataBase.ProductsList)
+            {
+                if (c.ID == int.Parse(TxtIdPro.Text))
+                {
+                    MessageBox.Show(TxtDesPro.Text + " Has been Successfully deleted");
+                    DataBase.ProductsList.Remove(c);
+                    
+                }
+                else
+                {
+                    MessageBox.Show(TxtDesPro.Text + " Is not in Our stock");
+                }
+            }*/
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 

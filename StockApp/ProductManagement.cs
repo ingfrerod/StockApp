@@ -22,7 +22,7 @@ namespace StockApp
             try
             {
                 DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text)));
-                MessageBox.Show(TxtIdPro.Text + " has been successfully saved ");
+                MessageBox.Show(TxtDesPro.Text + " has been successfully saved ");
                 return true;
             }
             catch(Exception error)
@@ -34,16 +34,24 @@ namespace StockApp
 
         public override void Delete()
         {
-            var item = DataBase.ProductsList.SingleOrDefault(x => x.ID == int.Parse(TxtIdPro.Text));
-            if (item != null)
+            try
             {
-                MessageBox.Show(TxtDesPro.Text + " Has been Successfully deleted");
-                DataBase.ProductsList.Remove(item);
-            }
-            else
+                var item = DataBase.ProductsList.SingleOrDefault(x => x.ID == int.Parse(TxtIdPro.Text));
+                if (item != null)
+                {
+                    MessageBox.Show(TxtDesPro.Text + " Has been Successfully deleted");
+                    DataBase.ProductsList.Remove(item);
+                }
+                else
+                {
+                    MessageBox.Show(TxtDesPro.Text + " Is not in Our stock");
+                }
+            }catch(Exception error)
             {
-                MessageBox.Show(TxtDesPro.Text + " Is not in Our stock");
+                MessageBox.Show("Error" + error);
             }
+
+
             //DataBase.ProductsList.RemoveAll(x => x.ID == int.Parse(TxtIdPro.Text));
             /*foreach (var c in DataBase.ProductsList)
             {

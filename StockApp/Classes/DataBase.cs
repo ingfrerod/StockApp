@@ -17,11 +17,9 @@ namespace StockApp
 
         };
 
-        public static List<Products> ProductsList { get; set; } = new List<Products>
-        {
+        public static List<Products> ProductsList { get; set; } = new List<Products>{};
 
-        };
-
+        public static List<Customer> CustomerList { get; set; } = new List<Customer> { };
         
        
         
