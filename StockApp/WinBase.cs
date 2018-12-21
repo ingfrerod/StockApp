@@ -32,7 +32,12 @@ namespace StockApp
         {
 
         }
-        public virtual Boolean save()
+
+        public virtual void SearchItem()
+        {
+
+        }
+        public virtual Boolean Save()
         {
             return false;
         }

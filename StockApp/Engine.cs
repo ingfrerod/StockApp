@@ -8,10 +8,6 @@ namespace StockApp
 {
     public class Engine
     {
-        public bool login()
-        { 
-            
-            return true;
-        }
+       
     }
 }

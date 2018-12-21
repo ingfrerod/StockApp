@@ -103,5 +103,12 @@ namespace StockApp
                 childForm.Close();
             }
         }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerManagement customer = new CustomerManagement();
+            customer.MdiParent = this;
+            customer.Show();
+        }
     }
 }

@@ -18,45 +18,46 @@ namespace StockApp
         }
         public static string IdSave = "";
         private void button1_Click(object sender, EventArgs e)
-        {   
-            int count = 0;
-            foreach (var c in DataBase.UserList)
-            {
-            
-            if (txtID.Text == c.userID && txtPsw.Text == c.Password )
-            {
-                    if (c.Admin)
+        {
+                int count = 0;
+                foreach (var c in DataBase.UserList)
+                {
+
+                    if ( txtID.Text == c.userID && txtPsw.Text == c.Password)
                     {
-                        AdminWin adminWin = new AdminWin();
-                        this.Hide();
-                        IdSave = c.userID;
-                        adminWin.Show();
-                        count++;
-                        
-                        
+                        if (c.Admin)
+                        {
+                            AdminWin adminWin = new AdminWin();
+                            this.Hide();
+                            IdSave = c.userID;
+                            adminWin.Show();
+                            count++;
+
+
+                        }
+                        else
+                        {
+                            UserWin userWin = new UserWin();
+                            this.Hide();
+                            IdSave = c.userID;
+                            userWin.Show();
+                            count++;
+
+                        }
+
+
                     }
-                    else
-                    {
-                        UserWin userWin = new UserWin();
-                        this.Hide();
-                        IdSave = c.userID;
-                        userWin.Show();
-                        count++;
-                        
-                    }
-                
-                
-            }
+
+                }
+                if (count == 0)
+                {
+                    MessageBox.Show("Your ID or Password are wrong, please try again");
+                    txtID.Text = "";
+                    txtPsw.Text = "";
+                    txtID.Focus();
+                }
             
-            }
-            if (count == 0)
-            {
-                MessageBox.Show("Your ID or Password are wrong, please try again");
-                txtID.Text = "";
-                txtPsw.Text = "";
-                txtID.Focus();
-            }
-           
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
