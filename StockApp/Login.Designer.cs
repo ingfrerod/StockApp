@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtPsw = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Location = new System.Drawing.Point(448, 402);
+            this.BtnExit.Size = new System.Drawing.Size(150, 44);
             // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(128, 402);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(150, 44);
             this.btnLogin.TabIndex = 2;
@@ -50,21 +54,10 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(492, 402);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(150, 44);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(290, 133);
-            this.txtID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtID.Margin = new System.Windows.Forms.Padding(6);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(308, 31);
             this.txtID.TabIndex = 0;
@@ -72,7 +65,7 @@
             // txtPsw
             // 
             this.txtPsw.Location = new System.Drawing.Point(290, 227);
-            this.txtPsw.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPsw.Margin = new System.Windows.Forms.Padding(6);
             this.txtPsw.Name = "txtPsw";
             this.txtPsw.PasswordChar = '*';
             this.txtPsw.Size = new System.Drawing.Size(308, 31);
@@ -98,18 +91,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::StockApp.Properties.Resources.login_system_icon_13;
-            this.pictureBox1.Location = new System.Drawing.Point(744, 58);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(408, 358);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -120,6 +101,18 @@
             this.label3.Size = new System.Drawing.Size(491, 44);
             this.label3.TabIndex = 7;
             this.label3.Text = "Welcome to the Stock App";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::StockApp.Properties.Resources.login_system_icon_13;
+            this.pictureBox1.Location = new System.Drawing.Point(744, 58);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(408, 358);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 
@@ -133,13 +126,20 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPsw);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.Controls.SetChildIndex(this.btnLogin, 0);
+            this.Controls.SetChildIndex(this.txtID, 0);
+            this.Controls.SetChildIndex(this.txtPsw, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.BtnExit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,7 +149,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtPsw;
         private System.Windows.Forms.Label label1;

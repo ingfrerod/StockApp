@@ -40,10 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // BtnExit
+            // 
+            this.BtnExit.Location = new System.Drawing.Point(568, 360);
+            this.BtnExit.Size = new System.Drawing.Size(220, 55);
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(568, 269);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 44);
             this.button5.TabIndex = 22;
@@ -53,7 +58,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(568, 185);
-            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(220, 44);
             this.button4.TabIndex = 21;
@@ -63,7 +68,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(568, 102);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(220, 44);
             this.button3.TabIndex = 20;
@@ -73,12 +78,13 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(568, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(220, 44);
             this.button1.TabIndex = 18;
             this.button1.Text = "Program";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UserUser
             // 
@@ -150,12 +156,22 @@
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "UserWin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Userwindows";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserWin_FormClosed);
             this.Load += new System.EventHandler(this.UserWin_Load);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.UserName, 0);
+            this.Controls.SetChildIndex(this.UserUser, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.button3, 0);
+            this.Controls.SetChildIndex(this.button4, 0);
+            this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.BtnExit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

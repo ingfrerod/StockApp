@@ -52,6 +52,30 @@
     <Compile Include="AdminWin.Designer.cs">
       <DependentUpon>AdminWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrincipalContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalContainer.Designer.cs">
+      <DependentUpon>PrincipalContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process.Designer.cs">
+      <DependentUpon>Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinBase.Designer.cs">
+      <DependentUpon>WinBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Login.cs">
@@ -59,6 +83,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management.Designer.cs">
+      <DependentUpon>Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +102,20 @@
     <EmbeddedResource Include="AdminWin.resx">
       <DependentUpon>AdminWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalContainer.resx">
+      <DependentUpon>PrincipalContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinBase.resx">
+      <DependentUpon>WinBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management.resx">
+      <DependentUpon>Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockApp
 {
-    public partial class Login : Form
+    public partial class Login : WinBase
     {
         public Login()
         {

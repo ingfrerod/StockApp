@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockApp
 {
-    public partial class AdminWin : Form
+    public partial class AdminWin : WinBase
     {
         public AdminWin()
         {
@@ -37,6 +37,13 @@ namespace StockApp
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PrincipalContainer principal = new PrincipalContainer();
+            this.Hide();
+            principal.Show();
         }
     }
 }
