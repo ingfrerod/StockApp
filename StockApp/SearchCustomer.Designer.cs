@@ -30,6 +30,10 @@
         {
             this.SuspendLayout();
             // 
+            // button3
+            // 
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // SearchCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

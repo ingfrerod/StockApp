@@ -22,5 +22,21 @@ namespace StockApp
         {
             dataGridView1.DataSource = DataBase.CustomerList;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text.Trim()) == false)
+            {
+                try
+                {
+                        dataGridView1.DataSource = DataBase.CustomerList.Select(x => x.Name == textBox1.Text.Trim());
+
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("Eror" + error);
+                }
+            }
+        }
     }
 }

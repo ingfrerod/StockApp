@@ -30,6 +30,15 @@
         {
             this.SuspendLayout();
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(389, 27);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(179, 29);
+            this.textBox1.Size = new System.Drawing.Size(163, 20);
+            // 
             // BtnExit
             // 
             this.BtnExit.Location = new System.Drawing.Point(402, 326);
