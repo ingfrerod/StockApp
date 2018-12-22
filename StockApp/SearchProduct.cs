@@ -15,13 +15,18 @@ namespace StockApp
         public SearchProduct()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DataBase.ProductsList;
+            
             
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void SearchProduct_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = DataBase.ProductsList;
         }
     }
 }

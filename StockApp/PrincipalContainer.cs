@@ -127,7 +127,9 @@ namespace StockApp
 
         private void customerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            SearchCustomer search = new SearchCustomer();
+            search.MdiParent = this;
+            search.Show();
         }
     }
 }

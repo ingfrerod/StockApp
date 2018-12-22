@@ -15,6 +15,11 @@ namespace StockApp
         public SearchCustomer()
         {
             InitializeComponent();
+           
+        }
+
+        private void SearchCustomer_Load(object sender, EventArgs e)
+        {
             dataGridView1.DataSource = DataBase.CustomerList;
         }
     }
