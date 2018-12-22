@@ -18,27 +18,35 @@ namespace StockApp
         }
 
         public override Boolean Save()
-        {
-            try
+        {  if (string.IsNullOrWhiteSpace(TxtIdPro.Text) || string.IsNullOrWhiteSpace(TxtDesPro.Text) || string.IsNullOrWhiteSpace(TxtPricePro.Text))
             {
-                DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text)));
-                MessageBox.Show(TxtDesPro.Text + " has been successfully saved ");
-                TxtIdPro.Text = "";
-                TxtDesPro.Text = "";
-                TxtPricePro.Text = "";
-                TxtIdPro.Focus();
-                return true;
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show("Error" + error);
-                TxtIdPro.Text = "";
-                TxtDesPro.Text = "";
-                TxtPricePro.Text = "";
-                TxtIdPro.Focus();
+                MessageBox.Show("All fields are mandatory", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            else
+            {
+                try
+                {
+                    DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text)));
+                    MessageBox.Show(TxtDesPro.Text + " has been successfully saved ");
+                    TxtIdPro.Text = "";
+                    TxtDesPro.Text = "";
+                    TxtPricePro.Text = "";
+                    TxtIdPro.Focus();
+                    return true;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error" + error);
+                    TxtIdPro.Text = "";
+                    TxtDesPro.Text = "";
+                    TxtPricePro.Text = "";
+                    TxtIdPro.Focus();
+                    return false;
+                }
+            }
         }
+           
 
         public override void Delete()
         {

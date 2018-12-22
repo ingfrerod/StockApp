@@ -15,6 +15,7 @@ namespace StockApp
         public SearchCustomer()
         {
             InitializeComponent();
+            dataGridView1.DataSource = DataBase.CustomerList;
         }
     }
 }

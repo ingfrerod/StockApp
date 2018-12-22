@@ -19,25 +19,34 @@ namespace StockApp
 
         public override Boolean Save()
         {
-            try
+            if (string.IsNullOrWhiteSpace(TxtIDCli.Text) || string.IsNullOrWhiteSpace(TxtNaCli.Text) || string.IsNullOrWhiteSpace(TxtAdCli.Text))
             {
-                DataBase.CustomerList.Add(new Customer(int.Parse(TxtIDCli.Text), TxtNaCli.Text, TxtAdCli.Text));
-                MessageBox.Show(TxtNaCli.Text + " has been successfully saved ");
-                TxtIDCli.Text = "";
-                TxtNaCli.Text = "";
-                TxtAdCli.Text = "";
-                TxtIDCli.Focus();
-                return true;
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Error" + error);
-                TxtIDCli.Text = "";
-                TxtNaCli.Text = "";
-                TxtAdCli.Text = "";
-                TxtIDCli.Focus();
+                MessageBox.Show("All fields are mandatory", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            else
+            {
+                try
+                {
+                    DataBase.CustomerList.Add(new Customer(int.Parse(TxtIDCli.Text), TxtNaCli.Text, TxtAdCli.Text));
+                    MessageBox.Show(TxtNaCli.Text + " has been successfully saved ");
+                    TxtIDCli.Text = "";
+                    TxtNaCli.Text = "";
+                    TxtAdCli.Text = "";
+                    TxtIDCli.Focus();
+                    return true;
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error" + error);
+                    TxtIDCli.Text = "";
+                    TxtNaCli.Text = "";
+                    TxtAdCli.Text = "";
+                    TxtIDCli.Focus();
+                    return false;
+                }
+            }
+            
         }
 
         public override void Delete()
