@@ -8,6 +8,9 @@ namespace StockApp
 {
     public class Engine
     {
-       
+       public void LoginWin()
+        {
+
+        }
     }
 }

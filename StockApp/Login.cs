@@ -17,8 +17,13 @@ namespace StockApp
             InitializeComponent();
         }
         public static string IdSave = "";
+        public static string TxtSaveID = "";
+        public static string TxtSavePsw = "";
+
         private void button1_Click(object sender, EventArgs e)
         {
+            TxtSaveID = txtID.Text;
+            TxtSavePsw = txtPsw.Text;
                 int count = 0;
                 foreach (var c in DataBase.UserList)
                 {
