@@ -8,9 +8,34 @@ namespace StockApp
 {
     public class Engine
     {
-       public void LoginWin()
+        public static void LoginWin()
         {
 
+            foreach (var c in DataBase.UserList)
+            {
+                if (Login.TxtSaveID == c.userID && Login.TxtSavePsw == c.Password)
+                {
+                    if (c.Admin)
+                    {
+                        AdminWin adminWin = new AdminWin();
+                       
+                        Login.IdSave = c.userID;
+                        adminWin.Show();
+                        Login.count++;
+       
+                    }
+                    else
+                    {
+                        UserWin userWin = new UserWin();
+                         Login.IdSave = c.userID;
+                        userWin.Show();
+                        Login.count++;
+
+                    }
+
+                }
+            }
         }
+                      
     }
 }

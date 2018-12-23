@@ -19,49 +19,28 @@ namespace StockApp
         public static string IdSave = "";
         public static string TxtSaveID = "";
         public static string TxtSavePsw = "";
+        public static int count = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TxtSaveID = txtID.Text;
-            TxtSavePsw = txtPsw.Text;
-                int count = 0;
-                foreach (var c in DataBase.UserList)
-                {
+            TxtSaveID = txtID.Text.Trim();
+            TxtSavePsw = txtPsw.Text.Trim();
+            count = 0;
 
-                    if ( txtID.Text == c.userID && txtPsw.Text == c.Password)
-                    {
-                        if (c.Admin)
-                        {
-                            AdminWin adminWin = new AdminWin();
-                            this.Hide();
-                            IdSave = c.userID;
-                            adminWin.Show();
-                            count++;
+            Engine.LoginWin();
 
+            if (count == 0)
+            {
+                MessageBox.Show("Your ID or Password are wrong, please try again");
+                txtID.Text = "";
+                txtPsw.Text = "";
+                txtID.Focus();
+            }
+            else
+            {
+                this.Hide();
+            }
 
-                        }
-                        else
-                        {
-                            UserWin userWin = new UserWin();
-                            this.Hide();
-                            IdSave = c.userID;
-                            userWin.Show();
-                            count++;
-
-                        }
-
-
-                    }
-
-                }
-                if (count == 0)
-                {
-                    MessageBox.Show("Your ID or Password are wrong, please try again");
-                    txtID.Text = "";
-                    txtPsw.Text = "";
-                    txtID.Focus();
-                }
-            
 
         }
 
