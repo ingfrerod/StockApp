@@ -26,7 +26,7 @@ namespace StockApp
         private void button3_Click(object sender, EventArgs e)
         {
             dataGridView1.ClearSelection();
-            String searchValue = textBox1.Text;  //Textbox1 -> Search Key Word
+            String searchValue = textBox1.Text;  
             int rowIndex = -1;
             int counter = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)

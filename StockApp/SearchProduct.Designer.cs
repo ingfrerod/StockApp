@@ -33,6 +33,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(389, 27);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 

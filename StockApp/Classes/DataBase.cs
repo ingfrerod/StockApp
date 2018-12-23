@@ -26,7 +26,8 @@ namespace StockApp
         public static List<Customer> CustomerList { get; set; } = new List<Customer>
         {
             new Customer(123,"Juan Rodriguez", "Prague"),
-            new Customer(785,"Daniel Perez", "Prague")
+            new Customer(785,"Daniel Perez", "Prague"),
+            new Customer(785,"Daniel Saenz", "Prague")
         };
         
        
