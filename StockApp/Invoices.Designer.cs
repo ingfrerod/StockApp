@@ -56,7 +56,7 @@
             // BtnExit
             // 
             this.BtnExit.Location = new System.Drawing.Point(586, 359);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(1);
             this.BtnExit.Size = new System.Drawing.Size(75, 21);
             // 
             // BtnAdd
@@ -230,6 +230,7 @@
             this.LblUser.Name = "LblUser";
             this.LblUser.Size = new System.Drawing.Size(196, 23);
             this.LblUser.TabIndex = 26;
+            this.LblUser.Click += new System.EventHandler(this.LblUser_Click);
             // 
             // Invoices
             // 
@@ -257,9 +258,10 @@
             this.Controls.Add(this.BtnCustomer);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnAdd);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Invoices";
             this.Text = "Invoices";
+            this.Load += new System.EventHandler(this.Invoices_Load);
             this.Controls.SetChildIndex(this.BtnAdd, 0);
             this.Controls.SetChildIndex(this.BtnDelete, 0);
             this.Controls.SetChildIndex(this.BtnCustomer, 0);

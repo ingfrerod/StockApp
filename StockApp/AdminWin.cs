@@ -23,15 +23,11 @@ namespace StockApp
         }
 
         private void AdminWin_Load(object sender, EventArgs e)
-        {   
-            foreach (var c in DataBase.UserList)
-            {
-                if (c.userID == Login.IdSave)
-                {
-                    AdminName.Text = c.Name;
-                    AdminUser.Text = c.userID;
-                }
-            }
+        {
+
+            AdminName.Text = Login.IDUser;
+            AdminUser.Text = Login.IdSave;
+             
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

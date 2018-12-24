@@ -131,5 +131,12 @@ namespace StockApp
             search.MdiParent = this;
             search.Show();
         }
+
+        private void invoicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Invoices invoices = new Invoices();
+            invoices.MdiParent = this;
+            invoices.Show();
+        }
     }
 }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace StockApp
 {
     public class Engine
-    {
+    {    
         public static void LoginWin()
-        {
+        {   
 
             foreach (var c in DataBase.UserList)
             {
@@ -20,8 +20,10 @@ namespace StockApp
                         AdminWin adminWin = new AdminWin();
                        
                         Login.IdSave = c.userID;
+                        Login.IDUser = c.Name;
                         adminWin.Show();
                         Login.count++;
+
        
                     }
                     else

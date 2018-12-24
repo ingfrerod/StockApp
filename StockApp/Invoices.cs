@@ -16,5 +16,15 @@ namespace StockApp
         {
             InitializeComponent();
         }
+
+        private void LblUser_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Invoices_Load(object sender, EventArgs e)
+        {
+            LblUser.Text = Login.IDUser;
+        }
     }
 }

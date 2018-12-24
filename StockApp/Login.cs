@@ -17,6 +17,7 @@ namespace StockApp
             InitializeComponent();
         }
         public static string IdSave = "";
+        public static string IDUser = "";
         public static string TxtSaveID = "";
         public static string TxtSavePsw = "";
         public static int count = 0;
