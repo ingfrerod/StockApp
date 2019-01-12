@@ -26,5 +26,17 @@ namespace StockApp
         {
             LblUser.Text = Login.IDUser;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtID.Text.Trim()) == false)
+            {
+                Engine.idcustomer = int.Parse(TxtID.Text);
+                Engine.SCustumer();
+                TxtCustomer.Text = Engine.NameCustomer;
+                Txtadress.Text = Engine.AddressCustomer;
+                TxtIDPro.Focus();
+            }
+        }
     }
 }

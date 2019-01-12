@@ -49,6 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.LblUser = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Txtadress = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -125,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 71);
+            this.label2.Location = new System.Drawing.Point(24, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 8;
@@ -134,7 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 112);
+            this.label3.Location = new System.Drawing.Point(24, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 9;
@@ -143,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(380, 366);
+            this.label4.Location = new System.Drawing.Point(380, 381);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 10;
@@ -151,49 +153,49 @@
             // 
             // TxtID
             // 
-            this.TxtID.Location = new System.Drawing.Point(112, 64);
+            this.TxtID.Location = new System.Drawing.Point(112, 61);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(138, 20);
             this.TxtID.TabIndex = 15;
             // 
             // TxtCustomer
             // 
-            this.TxtCustomer.Location = new System.Drawing.Point(112, 105);
+            this.TxtCustomer.Location = new System.Drawing.Point(112, 93);
             this.TxtCustomer.Name = "TxtCustomer";
             this.TxtCustomer.Size = new System.Drawing.Size(196, 20);
             this.TxtCustomer.TabIndex = 16;
             // 
             // TxtIDPro
             // 
-            this.TxtIDPro.Location = new System.Drawing.Point(27, 153);
+            this.TxtIDPro.Location = new System.Drawing.Point(27, 168);
             this.TxtIDPro.Name = "TxtIDPro";
             this.TxtIDPro.Size = new System.Drawing.Size(100, 20);
             this.TxtIDPro.TabIndex = 18;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(446, 363);
+            this.textBox5.Location = new System.Drawing.Point(446, 378);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 19;
             // 
             // TxtQty
             // 
-            this.TxtQty.Location = new System.Drawing.Point(446, 150);
+            this.TxtQty.Location = new System.Drawing.Point(446, 165);
             this.TxtQty.Name = "TxtQty";
             this.TxtQty.Size = new System.Drawing.Size(100, 20);
             this.TxtQty.TabIndex = 20;
             // 
             // Txtprice
             // 
-            this.Txtprice.Location = new System.Drawing.Point(324, 152);
+            this.Txtprice.Location = new System.Drawing.Point(324, 167);
             this.Txtprice.Name = "Txtprice";
             this.Txtprice.Size = new System.Drawing.Size(100, 20);
             this.Txtprice.TabIndex = 21;
             // 
             // TxtDes
             // 
-            this.TxtDes.Location = new System.Drawing.Point(152, 152);
+            this.TxtDes.Location = new System.Drawing.Point(152, 167);
             this.TxtDes.Name = "TxtDes";
             this.TxtDes.Size = new System.Drawing.Size(156, 20);
             this.TxtDes.TabIndex = 22;
@@ -201,7 +203,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 179);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 194);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(519, 178);
             this.dataGridView1.TabIndex = 23;
@@ -222,6 +224,7 @@
             this.button7.TabIndex = 25;
             this.button7.Text = "Search";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // LblUser
             // 
@@ -232,11 +235,29 @@
             this.LblUser.TabIndex = 26;
             this.LblUser.Click += new System.EventHandler(this.LblUser_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Address";
+            // 
+            // Txtadress
+            // 
+            this.Txtadress.Location = new System.Drawing.Point(112, 130);
+            this.Txtadress.Name = "Txtadress";
+            this.Txtadress.Size = new System.Drawing.Size(354, 20);
+            this.Txtadress.TabIndex = 28;
+            // 
             // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 388);
+            this.ClientSize = new System.Drawing.Size(684, 421);
+            this.Controls.Add(this.Txtadress);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.LblUser);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
@@ -284,6 +305,8 @@
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.button7, 0);
             this.Controls.SetChildIndex(this.LblUser, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.Txtadress, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -314,5 +337,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label LblUser;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Txtadress;
     }
 }

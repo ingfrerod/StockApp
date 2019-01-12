@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 namespace StockApp
 {
     public class Engine
-    {    
+    {
+        public static int idcustomer;
+        public static string NameCustomer;
+        public static string AddressCustomer;
         public static void LoginWin()
         {   
 
@@ -38,6 +41,18 @@ namespace StockApp
                 }
             }
         }
-                      
+
+        public static void SCustumer()
+        {
+            foreach (var c in DataBase.CustomerList)
+            {
+                if (c.ID == idcustomer)
+                {
+                    NameCustomer = c.Name;
+                    AddressCustomer = c.Address;
+                   
+                }
+            }
+        }
     }
 }

@@ -138,5 +138,10 @@ namespace StockApp
             invoices.MdiParent = this;
             invoices.Show();
         }
+
+        private void PrincipalContainer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
