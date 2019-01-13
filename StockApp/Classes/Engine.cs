@@ -80,6 +80,7 @@ namespace StockApp
                 {
                     c.Stock = c.Stock - Qupdate;
                     Qupdate = c.Stock;
+                    
 
                 }
             }

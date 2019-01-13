@@ -214,5 +214,66 @@ namespace StockApp
 
 
         }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (counter_row > 0)
+            {
+                TotalInvoice = TotalInvoice - (Convert.ToDouble(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value));
+                LblTotalInv.Text = TotalInvoice.ToString();
+                Engine.idproduct = Convert.ToInt16(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value);
+                Engine.Qupdate = -(Convert.ToInt16(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value));
+                Engine.Qtyupdater();
+                lblStock.Text = LblIdProduct.Text = LblPriceProd.Text= TxtQty.Text = "";
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                counter_row--;
+            }
+        }
+
+        private void BtnCustomer_Click(object sender, EventArgs e)
+        {
+            SearchCustomer SearchCus = new SearchCustomer();
+            SearchCus.ShowDialog();
+            if (SearchCus.DialogResult == DialogResult.OK)
+            {
+                TxtID.Text = SearchCus.dataGridView1.Rows[SearchCus.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                LblCustomerName.Text= SearchCus.dataGridView1.Rows[SearchCus.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                LblCustomerAddress.Text= SearchCus.dataGridView1.Rows[SearchCus.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                TxtIDPro.Focus();
+            }
+        }
+
+        private void BtnProducts_Click(object sender, EventArgs e)
+        {
+            SearchProduct SearchPro = new SearchProduct();
+            SearchPro.ShowDialog();
+            if (SearchPro.DialogResult == DialogResult.OK)
+            {
+                TxtIDPro.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                LblDescriptionProduct.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                LblPriceProd.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                lblStock.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                Engine.idproduct = int.Parse(TxtIDPro.Text);
+                TxtQty.Focus();
+
+            }
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    TotalInvoice = TotalInvoice - (Convert.ToDouble(dataGridView1.Rows[r.Index].Cells[4].Value));
+                    LblTotalInv.Text = TotalInvoice.ToString();
+                    Engine.idproduct = Convert.ToInt16(dataGridView1.Rows[r.Index].Cells[0].Value);
+                    Engine.Qupdate = -(Convert.ToInt16(dataGridView1.Rows[r.Index].Cells[3].Value));
+                    Engine.Qtyupdater();
+                    lblStock.Text = LblIdProduct.Text = LblPriceProd.Text = TxtQty.Text = "";
+                    dataGridView1.Rows.RemoveAt(r.Index);
+                    counter_row--;
+                }
+            
+            
+        }
     }
 }

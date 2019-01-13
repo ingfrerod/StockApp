@@ -48,7 +48,7 @@
             this.ProductQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.SearchCus = new System.Windows.Forms.Button();
             this.LblUser = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LblCustomerName = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.LblDescriptionProduct = new System.Windows.Forms.Label();
             this.LblPriceProd = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SearchProd = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.LblTotalInv = new System.Windows.Forms.Label();
@@ -93,6 +93,7 @@
             this.BtnDelete.TabIndex = 2;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnCustomer
             // 
@@ -102,6 +103,7 @@
             this.BtnCustomer.TabIndex = 3;
             this.BtnCustomer.Text = "Customers";
             this.BtnCustomer.UseVisualStyleBackColor = true;
+            this.BtnCustomer.Click += new System.EventHandler(this.BtnCustomer_Click);
             // 
             // BtnProducts
             // 
@@ -111,6 +113,7 @@
             this.BtnProducts.TabIndex = 4;
             this.BtnProducts.Text = "Products";
             this.BtnProducts.UseVisualStyleBackColor = true;
+            this.BtnProducts.Click += new System.EventHandler(this.BtnProducts_Click);
             // 
             // BtnNew
             // 
@@ -120,6 +123,7 @@
             this.BtnNew.TabIndex = 5;
             this.BtnNew.Text = "New";
             this.BtnNew.UseVisualStyleBackColor = true;
+            this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
             // 
             // BtnInvoice
             // 
@@ -202,6 +206,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(27, 274);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(533, 178);
             this.dataGridView1.TabIndex = 23;
             // 
@@ -240,15 +245,15 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // button7
+            // SearchCus
             // 
-            this.button7.Location = new System.Drawing.Point(231, 45);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(52, 23);
-            this.button7.TabIndex = 25;
-            this.button7.Text = "Search";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.SearchCus.Location = new System.Drawing.Point(231, 45);
+            this.SearchCus.Name = "SearchCus";
+            this.SearchCus.Size = new System.Drawing.Size(52, 23);
+            this.SearchCus.TabIndex = 25;
+            this.SearchCus.Text = "Search";
+            this.SearchCus.UseVisualStyleBackColor = true;
+            this.SearchCus.Click += new System.EventHandler(this.button7_Click);
             // 
             // LblUser
             // 
@@ -363,15 +368,15 @@
             this.LblPriceProd.TabIndex = 37;
             this.LblPriceProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // SearchProd
             // 
-            this.button1.Location = new System.Drawing.Point(231, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SearchProd.Location = new System.Drawing.Point(231, 178);
+            this.SearchProd.Name = "SearchProd";
+            this.SearchProd.Size = new System.Drawing.Size(52, 23);
+            this.SearchProd.TabIndex = 38;
+            this.SearchProd.Text = "Search";
+            this.SearchProd.UseVisualStyleBackColor = true;
+            this.SearchProd.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -409,7 +414,7 @@
             this.Controls.Add(this.LblTotalInv);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SearchProd);
             this.Controls.Add(this.LblPriceProd);
             this.Controls.Add(this.LblDescriptionProduct);
             this.Controls.Add(this.label11);
@@ -422,7 +427,7 @@
             this.Controls.Add(this.LblCustomerName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LblUser);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.SearchCus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TxtQty);
@@ -458,7 +463,7 @@
             this.Controls.SetChildIndex(this.TxtQty, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.button7, 0);
+            this.Controls.SetChildIndex(this.SearchCus, 0);
             this.Controls.SetChildIndex(this.LblUser, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.LblCustomerName, 0);
@@ -471,7 +476,7 @@
             this.Controls.SetChildIndex(this.label11, 0);
             this.Controls.SetChildIndex(this.LblDescriptionProduct, 0);
             this.Controls.SetChildIndex(this.LblPriceProd, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.SearchProd, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.lblStock, 0);
             this.Controls.SetChildIndex(this.LblTotalInv, 0);
@@ -499,7 +504,7 @@
         private System.Windows.Forms.TextBox TxtQty;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button SearchCus;
         private System.Windows.Forms.Label LblUser;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProdID;
@@ -517,7 +522,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label LblDescriptionProduct;
         private System.Windows.Forms.Label LblPriceProd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SearchProd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label LblTotalInv;
