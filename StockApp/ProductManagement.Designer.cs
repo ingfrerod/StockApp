@@ -34,6 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtStock = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -107,11 +110,30 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Price";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Stock";
+            // 
+            // TxtStock
+            // 
+            this.TxtStock.Location = new System.Drawing.Point(142, 222);
+            this.TxtStock.Name = "TxtStock";
+            this.TxtStock.Size = new System.Drawing.Size(141, 20);
+            this.TxtStock.TabIndex = 12;
+            // 
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 349);
+            this.Controls.Add(this.TxtStock);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -120,6 +142,7 @@
             this.Controls.Add(this.TxtIdPro);
             this.Name = "ProductManagement";
             this.Text = "ProductManagement";
+            this.Load += new System.EventHandler(this.ProductManagement_Load);
             this.Controls.SetChildIndex(this.BtnExit, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.button2, 0);
@@ -131,6 +154,9 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.TxtStock, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +170,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtStock;
     }
 }

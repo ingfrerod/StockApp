@@ -19,8 +19,8 @@ namespace StockApp
 
         public static List<Products> ProductsList { get; set; } = new List<Products>
         {
-            new Products(123, "Rice", 45.3),
-            new Products(456, "Milk", 78.3)
+            new Products(123, "Rice x 1 kg", 45.3, 30),
+            new Products(456, "Milk x 1000 ml", 78.3, 40)
         };
 
         public static List<Customer> CustomerList { get; set; } = new List<Customer>

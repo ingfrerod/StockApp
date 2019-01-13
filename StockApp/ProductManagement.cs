@@ -27,7 +27,7 @@ namespace StockApp
             {
                 try
                 {
-                    DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text)));
+                    DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text),int.Parse(TxtStock.Text)));
                     MessageBox.Show(TxtDesPro.Text + " has been successfully saved ");
                     TxtIdPro.Text = "";
                     TxtDesPro.Text = "";
@@ -94,6 +94,11 @@ namespace StockApp
                     MessageBox.Show(TxtDesPro.Text + " Is not in Our stock");
                 }
             }*/
+        }
+
+        private void ProductManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
     

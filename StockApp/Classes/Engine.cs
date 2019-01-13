@@ -11,6 +11,10 @@ namespace StockApp
         public static int idcustomer;
         public static string NameCustomer;
         public static string AddressCustomer;
+        public static int idproduct;
+        public static string ProductDescription;
+        public static double ProductPrice;
+        public static int productStock;
         public static void LoginWin()
         {   
 
@@ -51,6 +55,18 @@ namespace StockApp
                     NameCustomer = c.Name;
                     AddressCustomer = c.Address;
                    
+                }
+            }
+        }
+        public static void SProduct()
+        {
+            foreach (var c in DataBase.ProductsList)
+            {
+                if (c.ID == idproduct)
+                {
+                    ProductDescription = c.Description;
+                    ProductPrice = c.Price;
+                    productStock = c.Stock;
                 }
             }
         }
