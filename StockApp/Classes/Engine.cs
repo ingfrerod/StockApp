@@ -15,6 +15,9 @@ namespace StockApp
         public static string ProductDescription;
         public static double ProductPrice;
         public static int productStock;
+        public static int Qupdate;
+
+
         public static void LoginWin()
         {   
 
@@ -45,7 +48,6 @@ namespace StockApp
                 }
             }
         }
-
         public static void SCustumer()
         {
             foreach (var c in DataBase.CustomerList)
@@ -67,6 +69,18 @@ namespace StockApp
                     ProductDescription = c.Description;
                     ProductPrice = c.Price;
                     productStock = c.Stock;
+                }
+            }
+        }
+        public static void Qtyupdater()
+        {
+            foreach (var c in DataBase.ProductsList)
+            {
+                if (c.ID==idproduct)
+                {
+                    c.Stock = c.Stock - Qupdate;
+                    Qupdate = c.Stock;
+
                 }
             }
         }

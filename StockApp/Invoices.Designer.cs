@@ -40,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxtID = new System.Windows.Forms.TextBox();
             this.TxtIDPro = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.TxtQty = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ProdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +64,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
+            this.LblTotalInv = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -179,13 +179,6 @@
             this.TxtIDPro.Name = "TxtIDPro";
             this.TxtIDPro.Size = new System.Drawing.Size(138, 20);
             this.TxtIDPro.TabIndex = 18;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(446, 474);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 19;
             // 
             // TxtQty
             // 
@@ -398,11 +391,22 @@
             this.lblStock.TabIndex = 40;
             this.lblStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LblTotalInv
+            // 
+            this.LblTotalInv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblTotalInv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalInv.Location = new System.Drawing.Point(432, 472);
+            this.LblTotalInv.Name = "LblTotalInv";
+            this.LblTotalInv.Size = new System.Drawing.Size(118, 23);
+            this.LblTotalInv.TabIndex = 41;
+            this.LblTotalInv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 506);
+            this.Controls.Add(this.LblTotalInv);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
@@ -422,7 +426,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TxtQty);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.TxtIDPro);
             this.Controls.Add(this.TxtID);
             this.Controls.Add(this.label4);
@@ -452,7 +455,6 @@
             this.Controls.SetChildIndex(this.TxtID, 0);
             this.Controls.SetChildIndex(this.BtnExit, 0);
             this.Controls.SetChildIndex(this.TxtIDPro, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
             this.Controls.SetChildIndex(this.TxtQty, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
@@ -472,6 +474,7 @@
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.lblStock, 0);
+            this.Controls.SetChildIndex(this.LblTotalInv, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -493,7 +496,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtID;
         private System.Windows.Forms.TextBox TxtIDPro;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox TxtQty;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -518,5 +520,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.Label LblTotalInv;
     }
 }
