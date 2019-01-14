@@ -269,9 +269,10 @@ namespace StockApp
                     Engine.Qupdate = -(Convert.ToInt16(dataGridView1.Rows[r.Index].Cells[3].Value));
                     Engine.Qtyupdater();
                     lblStock.Text = LblIdProduct.Text = LblPriceProd.Text = TxtQty.Text = "";
-                    dataGridView1.Rows.RemoveAt(r.Index);
+                  
                     counter_row--;
                 }
+            dataGridView1.Rows.Clear();
             
             
         }
