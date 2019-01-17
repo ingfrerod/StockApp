@@ -155,7 +155,7 @@ namespace StockApp
                     }
                     else
                     {
-                        MessageBox.Show(TxtDesPro.Text + " Is not in Our stock");
+                        MessageBox.Show(" You cannot Update or change the product ID");
                         TxtIdPro.Text = "";
                         TxtDesPro.Text = "";
                         TxtPricePro.Text = "";

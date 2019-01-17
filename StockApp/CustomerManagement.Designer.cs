@@ -34,31 +34,37 @@
             this.TxtAdCli = new System.Windows.Forms.TextBox();
             this.TxtNaCli = new System.Windows.Forms.TextBox();
             this.TxtIDCli = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(352, 40);
-            this.button1.Size = new System.Drawing.Size(134, 23);
+            this.button1.Location = new System.Drawing.Point(137, 26);
+            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.Text = "Search Customer";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(352, 90);
+            this.button2.Location = new System.Drawing.Point(331, 66);
             this.button2.Size = new System.Drawing.Size(134, 23);
+            this.button2.Text = "Add New Customer";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(352, 147);
+            this.button3.Location = new System.Drawing.Point(331, 106);
             this.button3.Size = new System.Drawing.Size(134, 23);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(352, 206);
+            this.button4.Location = new System.Drawing.Point(331, 144);
             this.button4.Size = new System.Drawing.Size(134, 23);
+            this.button4.Text = "Update";
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // BtnExit
             // 
-            this.BtnExit.Location = new System.Drawing.Point(352, 256);
+            this.BtnExit.Location = new System.Drawing.Point(331, 187);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.BtnExit.Size = new System.Drawing.Size(134, 25);
             // 
@@ -123,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 351);
+            this.ClientSize = new System.Drawing.Size(494, 255);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -144,6 +150,7 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,23 +26,36 @@ namespace StockApp
             }
             else
             {
-                try
+                var item = DataBase.CustomerList.SingleOrDefault(x => x.ID == int.Parse(TxtIDCli.Text));
+                if (item == null)
                 {
-                    DataBase.CustomerList.Add(new Customer(int.Parse(TxtIDCli.Text), TxtNaCli.Text, TxtAdCli.Text));
-                    MessageBox.Show(TxtNaCli.Text + " has been successfully saved ");
-                    TxtIDCli.Text = "";
-                    TxtNaCli.Text = "";
-                    TxtAdCli.Text = "";
-                    TxtIDCli.Focus();
-                    return true;
+
+                    try
+                    {
+                        DataBase.CustomerList.Add(new Customer(int.Parse(TxtIDCli.Text), TxtNaCli.Text, TxtAdCli.Text));
+                        MessageBox.Show(TxtNaCli.Text + " has been successfully saved ");
+                        TxtIDCli.Text = "";
+                        TxtNaCli.Text = "";
+                        TxtAdCli.Text = "";
+                        TxtIDCli.Focus();
+                        return true;
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Error" + error);
+                        TxtIDCli.Text = "";
+                        TxtNaCli.Text = "";
+                        TxtAdCli.Text = "";
+                        TxtIDCli.Focus();
+                        return false;
+                    }
                 }
-                catch (Exception error)
+                else
                 {
-                    MessageBox.Show("Error" + error);
+                    MessageBox.Show("The custumer with ID " + TxtIDCli.Text + "Already is in the DataBase");
                     TxtIDCli.Text = "";
                     TxtNaCli.Text = "";
                     TxtAdCli.Text = "";
-                    TxtIDCli.Focus();
                     return false;
                 }
             }
@@ -126,6 +139,63 @@ namespace StockApp
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SearchCustomer SearchCus = new SearchCustomer();
+            SearchCus.ShowDialog();
+            if (SearchCus.DialogResult == DialogResult.OK)
+            {
+                TxtIDCli.Text= SearchCus.dataGridView1.Rows[SearchCus.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                TxtNaCli.Text = SearchCus.dataGridView1.Rows[SearchCus.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                TxtAdCli.Text = SearchCus.dataGridView1.Rows[SearchCus.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtIDCli.Text) || string.IsNullOrWhiteSpace(TxtNaCli.Text) || string.IsNullOrWhiteSpace(TxtAdCli.Text))
+            {
+                MessageBox.Show("All fields are mandatory", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+            }
+            else
+            {
+                var item = DataBase.CustomerList.SingleOrDefault(x => x.ID == int.Parse(TxtIDCli.Text));
+                if (item != null)
+                {
+
+                    try
+                    {
+                        item.Name = TxtNaCli.Text;
+                        item.Address = TxtAdCli.Text;
+                        MessageBox.Show(TxtNaCli.Text + " has been successfully updated");
+                        TxtIDCli.Text = "";
+                        TxtNaCli.Text = "";
+                        TxtAdCli.Text = "";
+                        TxtIDCli.Focus();
+                        
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Error" + error);
+                        TxtIDCli.Text = "";
+                        TxtNaCli.Text = "";
+                        TxtAdCli.Text = "";
+                        TxtIDCli.Focus();
+                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("You cannot Update or change the customer ID");
+                    TxtIDCli.Text = "";
+                    TxtNaCli.Text = "";
+                    TxtAdCli.Text = "";
+                }
+            }
         }
     }
 }
