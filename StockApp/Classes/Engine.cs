@@ -16,6 +16,7 @@ namespace StockApp
         public static double ProductPrice;
         public static int productStock;
         public static int Qupdate;
+        public static int InvoiceNo;
 
 
         public static void LoginWin()
@@ -84,6 +85,11 @@ namespace StockApp
 
                 }
             }
+        }
+        public static void InvoiceNumber()
+        {
+            InvoiceNo = 0001;
+            InvoiceNo++;
         }
     }
 }

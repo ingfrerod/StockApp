@@ -15,6 +15,9 @@ namespace StockApp
         public Invoices()
         {
             InitializeComponent();
+           
+            
+
         }
 
         private void LblUser_Click(object sender, EventArgs e)

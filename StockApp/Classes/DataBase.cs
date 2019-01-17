@@ -19,8 +19,13 @@ namespace StockApp
 
         public static List<Products> ProductsList { get; set; } = new List<Products>
         {
-            new Products(123, "Rice x 1 kg", 45.3, 30),
-            new Products(456, "Milk x 1000 ml", 78.3, 40)
+            new Products(123, "Ipad 2018", 17000, 30),
+            new Products(456, "Iphone X", 25000, 40),
+            new Products(678, "Samsung s9+", 16000, 50),
+            new Products(891, "MacBook Pro", 54000, 4),
+            new Products(457, "Laptop Lenovo A123 ", 20000, 0),
+            new Products(679, "Samsung M3", 11000, 150),
+            new Products(898, "Huawei Mate pro", 25000, 14)
         };
 
         public static List<Customer> CustomerList { get; set; } = new List<Customer>

@@ -47,7 +47,6 @@
             this.ProdPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchCus = new System.Windows.Forms.Button();
             this.LblUser = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,8 +64,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.LblTotalInv = new System.Windows.Forms.Label();
+            this.LblInvoiceN = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnExit
@@ -238,14 +238,6 @@
             this.TotalPrice.HeaderText = "Total Price";
             this.TotalPrice.Name = "TotalPrice";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(413, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(263, 155);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // SearchCus
             // 
             this.SearchCus.Location = new System.Drawing.Point(289, 46);
@@ -407,11 +399,31 @@
             this.LblTotalInv.TabIndex = 41;
             this.LblTotalInv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LblInvoiceN
+            // 
+            this.LblInvoiceN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblInvoiceN.Location = new System.Drawing.Point(497, 40);
+            this.LblInvoiceN.Name = "LblInvoiceN";
+            this.LblInvoiceN.Size = new System.Drawing.Size(196, 23);
+            this.LblInvoiceN.TabIndex = 42;
+            this.LblInvoiceN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(439, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "Invoice #";
+            // 
             // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 506);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.LblInvoiceN);
             this.Controls.Add(this.LblTotalInv);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.label6);
@@ -429,7 +441,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LblUser);
             this.Controls.Add(this.SearchCus);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TxtQty);
             this.Controls.Add(this.TxtIDPro);
@@ -463,7 +474,6 @@
             this.Controls.SetChildIndex(this.TxtIDPro, 0);
             this.Controls.SetChildIndex(this.TxtQty, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.SearchCus, 0);
             this.Controls.SetChildIndex(this.LblUser, 0);
             this.Controls.SetChildIndex(this.label5, 0);
@@ -481,8 +491,9 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.lblStock, 0);
             this.Controls.SetChildIndex(this.LblTotalInv, 0);
+            this.Controls.SetChildIndex(this.LblInvoiceN, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,7 +515,6 @@
         private System.Windows.Forms.TextBox TxtIDPro;
         private System.Windows.Forms.TextBox TxtQty;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button SearchCus;
         private System.Windows.Forms.Label LblUser;
         private System.Windows.Forms.Label label5;
@@ -527,5 +537,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label LblTotalInv;
+        private System.Windows.Forms.Label LblInvoiceN;
+        private System.Windows.Forms.Label label10;
     }
 }
