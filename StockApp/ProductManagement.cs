@@ -25,19 +25,33 @@ namespace StockApp
             }
             else
             {
-                try
+                var item = DataBase.ProductsList.SingleOrDefault(x => x.ID == int.Parse(TxtIdPro.Text));
+                if (item == null)
                 {
-                    DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text),int.Parse(TxtStock.Text)));
-                    MessageBox.Show(TxtDesPro.Text + " has been successfully saved ");
-                    TxtIdPro.Text = "";
-                    TxtDesPro.Text = "";
-                    TxtPricePro.Text = "";
-                    TxtIdPro.Focus();
-                    return true;
+
+                    try
+                    {
+                        DataBase.ProductsList.Add(new Products(int.Parse(TxtIdPro.Text), TxtDesPro.Text, double.Parse(TxtPricePro.Text), int.Parse(TxtStock.Text)));
+                        MessageBox.Show(TxtDesPro.Text + " has been successfully saved ");
+                        TxtIdPro.Text = "";
+                        TxtDesPro.Text = "";
+                        TxtPricePro.Text = "";
+                        TxtIdPro.Focus();
+                        return true;
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Error" + error);
+                        TxtIdPro.Text = "";
+                        TxtDesPro.Text = "";
+                        TxtPricePro.Text = "";
+                        TxtIdPro.Focus();
+                        return false;
+                    }
                 }
-                catch (Exception error)
+                else
                 {
-                    MessageBox.Show("Error" + error);
+                    MessageBox.Show("A product with ID "+ TxtIdPro.Text + " is already in Our Data Base");
                     TxtIdPro.Text = "";
                     TxtDesPro.Text = "";
                     TxtPricePro.Text = "";
@@ -98,6 +112,65 @@ namespace StockApp
 
         private void ProductManagement_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SearchProduct SearchPro = new SearchProduct();
+            SearchPro.ShowDialog();
+            if (SearchPro.DialogResult == DialogResult.OK)
+            {
+                TxtIdPro.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                TxtDesPro.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                TxtPricePro.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                TxtStock.Text = SearchPro.dataGridView1.Rows[SearchPro.dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+           
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TxtIdPro.Text) || string.IsNullOrWhiteSpace(TxtDesPro.Text) || string.IsNullOrWhiteSpace(TxtPricePro.Text))
+            {
+                MessageBox.Show("All fields are mandatory", "error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                try
+                {
+                    var item = DataBase.ProductsList.SingleOrDefault(x => x.ID == int.Parse(TxtIdPro.Text));
+                    if (item != null)
+                    {
+                        MessageBox.Show(TxtDesPro.Text + " Has been Successfully Updated");
+                        item.ID = int.Parse(TxtIdPro.Text);
+                        item.Description = TxtDesPro.Text;
+                        item.Price = double.Parse(TxtPricePro.Text);
+                        item.Stock = int.Parse(TxtStock.Text);
+                        TxtIdPro.Text = "";
+                        TxtDesPro.Text = "";
+                        TxtPricePro.Text = "";
+                        TxtIdPro.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show(TxtDesPro.Text + " Is not in Our stock");
+                        TxtIdPro.Text = "";
+                        TxtDesPro.Text = "";
+                        TxtPricePro.Text = "";
+                        TxtIdPro.Focus();
+                    }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error" + error);
+                    TxtIdPro.Text = "";
+                    TxtDesPro.Text = "";
+                    TxtPricePro.Text = "";
+                    TxtIdPro.Focus();
+                }
+            }
 
         }
     }

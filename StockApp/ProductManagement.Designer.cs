@@ -41,23 +41,33 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(410, 49);
+            this.button1.Location = new System.Drawing.Point(142, 27);
+            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.Text = "Current Products";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(410, 99);
+            this.button2.Location = new System.Drawing.Point(357, 66);
+            this.button2.Size = new System.Drawing.Size(132, 23);
+            this.button2.Text = "Add New Product";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(410, 156);
+            this.button3.Location = new System.Drawing.Point(357, 118);
+            this.button3.Size = new System.Drawing.Size(132, 23);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(410, 215);
+            this.button4.Location = new System.Drawing.Point(357, 173);
+            this.button4.Size = new System.Drawing.Size(132, 23);
+            this.button4.Text = "Update Product";
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // BtnExit
             // 
-            this.BtnExit.Location = new System.Drawing.Point(410, 271);
+            this.BtnExit.Location = new System.Drawing.Point(357, 222);
+            this.BtnExit.Size = new System.Drawing.Size(132, 25);
             // 
             // TxtIdPro
             // 
@@ -131,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 349);
+            this.ClientSize = new System.Drawing.Size(547, 294);
             this.Controls.Add(this.TxtStock);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
