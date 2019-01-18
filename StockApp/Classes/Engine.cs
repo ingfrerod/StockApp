@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace StockApp
-{
+{//here you can find the database engine 
     public class Engine
     {
         public static int idcustomer;
@@ -21,7 +21,7 @@ namespace StockApp
 
         public static void LoginWin()
         {   
-
+            //login autentification process
             foreach (var c in DataBase.UserList)
             {
                 if (Login.TxtSaveID == c.userID && Login.TxtSavePsw == c.Password)
@@ -50,7 +50,7 @@ namespace StockApp
             }
         }
         public static void SCustumer()
-        {
+        {//Search a customer 
             foreach (var c in DataBase.CustomerList)
             {
                 if (c.ID == idcustomer)
