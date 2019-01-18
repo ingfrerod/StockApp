@@ -53,6 +53,7 @@
       <DependentUpon>AdminWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\InvoiceDB.cs" />
     <Compile Include="CustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="Invoices.Designer.cs">
       <DependentUpon>Invoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewInvoice.Designer.cs">
+      <DependentUpon>NewInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="PrincipalContainer.cs">
       <SubType>Form</SubType>
@@ -139,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices.resx">
       <DependentUpon>Invoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewInvoice.resx">
+      <DependentUpon>NewInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalContainer.resx">
       <DependentUpon>PrincipalContainer.cs</DependentUpon>

@@ -34,16 +34,21 @@ namespace StockApp
             new Customer(456,"Daniel Perez", "Prague"),
             new Customer(789,"Daniel Saenz", "Prague")
         };
-        
-       
-        
-        
-        
-        
-        
-       
 
-      
+        public static List<InvoiceDB> InvoiceList { get; set; } = new List<InvoiceDB>
+        {
+            new InvoiceDB(10000,"18 - 01 - 2019",78526)
+
+        };
+
+
+
+
+
+
+
+
+
     }
 }
     

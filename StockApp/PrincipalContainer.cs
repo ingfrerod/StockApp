@@ -143,5 +143,12 @@ namespace StockApp
         {
 
         }
+
+        private void invocesHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewInvoice newInvoice = new NewInvoice();
+            newInvoice.MdiParent = this;
+            newInvoice.Show();
+        }
     }
 }

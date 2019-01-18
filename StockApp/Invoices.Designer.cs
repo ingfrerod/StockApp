@@ -66,6 +66,8 @@
             this.LblTotalInv = new System.Windows.Forms.Label();
             this.LblInvoiceN = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.LblDate = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,6 +135,7 @@
             this.BtnInvoice.TabIndex = 6;
             this.BtnInvoice.Text = "Invoice";
             this.BtnInvoice.UseVisualStyleBackColor = true;
+            this.BtnInvoice.Click += new System.EventHandler(this.BtnInvoice_Click);
             // 
             // label1
             // 
@@ -165,11 +168,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(313, 472);
+            this.label4.Location = new System.Drawing.Point(265, 472);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Total";
+            this.label4.Text = "Total CZK";
             // 
             // TxtID
             // 
@@ -417,11 +420,31 @@
             this.label10.TabIndex = 43;
             this.label10.Text = "Invoice #";
             // 
+            // LblDate
+            // 
+            this.LblDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblDate.Location = new System.Drawing.Point(497, 78);
+            this.LblDate.Name = "LblDate";
+            this.LblDate.Size = new System.Drawing.Size(196, 23);
+            this.LblDate.TabIndex = 44;
+            this.LblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(439, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(30, 13);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "Date";
+            // 
             // Invoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 506);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.LblDate);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.LblInvoiceN);
             this.Controls.Add(this.LblTotalInv);
@@ -493,6 +516,8 @@
             this.Controls.SetChildIndex(this.LblTotalInv, 0);
             this.Controls.SetChildIndex(this.LblInvoiceN, 0);
             this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.LblDate, 0);
+            this.Controls.SetChildIndex(this.label12, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -539,5 +564,7 @@
         private System.Windows.Forms.Label LblTotalInv;
         private System.Windows.Forms.Label LblInvoiceN;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label LblDate;
+        private System.Windows.Forms.Label label12;
     }
 }

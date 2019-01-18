@@ -28,6 +28,10 @@ namespace StockApp
         private void Invoices_Load(object sender, EventArgs e)
         {
             LblUser.Text = Login.IDUser;
+            Engine.InvoiceNumber();
+            LblInvoiceN.Text= Engine.InvoiceNo.ToString();
+
+            LblDate.Text = DateTime.Now.ToString("M/d/yyyy");
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -193,7 +197,7 @@ namespace StockApp
                     {
                         TotalInvoice += Convert.ToDouble(r.Cells[4].Value);
                     }
-                    LblTotalInv.Text = "CZK " + TotalInvoice.ToString();
+                    LblTotalInv.Text =TotalInvoice.ToString();
                 }
                 else
                 {   if (int.Parse(lblStock.Text) == 0)
@@ -271,13 +275,26 @@ namespace StockApp
                     Engine.idproduct = Convert.ToInt16(dataGridView1.Rows[r.Index].Cells[0].Value);
                     Engine.Qupdate = -(Convert.ToInt16(dataGridView1.Rows[r.Index].Cells[3].Value));
                     Engine.Qtyupdater();
-                    lblStock.Text = LblIdProduct.Text = LblPriceProd.Text = TxtQty.Text = "";
-                  
-                    counter_row--;
+                lblStock.Text = LblPriceProd.Text = TxtQty.Text = TxtID.Text =
+            LblCustomerName.Text  = LblCustomerAddress.Text = LblDescriptionProduct.Text = "";
+
+                counter_row--;
                 }
             dataGridView1.Rows.Clear();
             
             
+        }
+        
+        private void BtnInvoice_Click(object sender, EventArgs e)
+        {
+
+            DataBase.InvoiceList.Add(new InvoiceDB(int.Parse(LblInvoiceN.Text),LblDate.Text.ToString(),double.Parse(LblTotalInv.Text)));
+            MessageBox.Show("Invoice Created");
+            lblStock.Text = LblPriceProd.Text = TxtQty.Text = TxtID.Text= 
+                LblCustomerName.Text = LblCustomerAddress.Text= LblDescriptionProduct.Text= "";
+            Engine.InvoiceNumber();
+            LblInvoiceN.Text = Engine.InvoiceNo.ToString();
+            dataGridView1.Rows.Clear();
         }
     }
 }
